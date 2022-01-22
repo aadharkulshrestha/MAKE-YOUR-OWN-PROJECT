@@ -1,1 +1,2 @@
-# PRO-C187-MAKE-YOUR-OWN-PROJECT
+# PRO-C156-Teacher-Ref
+Model required: Use the models used in the previous class.
