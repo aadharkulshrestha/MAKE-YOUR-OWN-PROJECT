@@ -48,33 +48,33 @@ AFRAME.registerComponent("plane-rotation-reader", {
       //control the attributes with the Arrow Keys
       if (e.key === "ArrowRight") {
         if (planeRotation.x < 10) {
-          planeRotation.x += 0.5;
+          planeRotation.x += 0.1;
           this.el.setAttribute("rotation", planeRotation);
         }
       }
       if (e.key === "ArrowLeft") {
         if (planeRotation.x > -10) {
-          planeRotation.x -= 0.5;
+          planeRotation.x -= 0.1;
           this.el.setAttribute("rotation", planeRotation);
         }
       }
       if (e.key === "ArrowUp") {
         if (planeRotation.z < 20) {
-          planeRotation.z += 0.5;
+          planeRotation.z += 0.2;
           this.el.setAttribute("rotation", planeRotation);
         }
         if (planePosition.y < 2) {
-          planePosition.y += 0.01;
+          planePosition.y += 0.1;
           this.el.setAttribute("position", planePosition);
         }
       }
       if (e.key === "ArrowDown") {
         if (planeRotation.z > -10) {
-          planeRotation.z -= 0.5;
+          planeRotation.z -= 0.2;
           this.el.setAttribute("rotation", planeRotation);
         }
         if (planePosition.y > -2) {
-          planePosition.y -= 0.01;
+          planePosition.y -= 0.1;
           this.el.setAttribute("position", planePosition);
         }
       }

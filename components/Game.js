@@ -4,7 +4,7 @@ AFRAME.registerComponent("game-play", {
   },
 
   init: function () {
-    var duration = 120;
+    var duration = 1000;
     var timerEl = document.querySelector("#timer");
     this.startTimer(duration, timerEl);
   },
@@ -17,8 +17,8 @@ AFRAME.registerComponent("game-play", {
     var minutes;
     var seconds;
 
-    setInterval(()=> {
-      if (duration >=0) {
+    setInterval(() => {
+      if (duration >= 0) {
         minutes = parseInt(duration / 60);
         seconds = parseInt(duration % 60);
 
@@ -34,11 +34,10 @@ AFRAME.registerComponent("game-play", {
         });
 
         duration -= 1;
-      } 
-      else {
-        this.gameOver();        
+      } else {
+        this.gameOver();
       }
-    },5000)
+    }, 1000);
   },
   isCollided: function (elemntId) {
     var element = document.querySelector(elemntId);
@@ -47,8 +46,7 @@ AFRAME.registerComponent("game-play", {
         element.setAttribute("visible", false);
         this.updateScore();
         this.updateTargets();
-      } 
-      else {
+      } else {
         this.gameOver();
       }
     });
@@ -76,7 +74,7 @@ AFRAME.registerComponent("game-play", {
     var element = document.querySelector("#game_over_text");
     element.setAttribute("visible", true);
     planeEl.setAttribute("dynamic-body", {
-      mass: 1
+      mass: 1,
     });
   },
 });
