@@ -11,9 +11,9 @@ AFRAME.registerComponent("target-ring", {
       var posY = Math.random() * 50 + -1;
       var posZ = Math.random() * 1000 + -1000;
 
-      var blackPosition = { x: posX + 100, y: posY + 30, z: posZ + 100 };
-      var greenPosition = { x: posX + 300, y: posY + 30, z: posZ + 100 };
-      var redPosition = { x: posX + 500, y: posY + 30, z: posZ + 100 };
+      var blackPosition = { x: posX + 100, y: posY + 25, z: posZ + 100 };
+      var greenPosition = { x: posX + 300, y: posY + 25, z: posZ + 100 };
+      var redPosition = { x: posX + 500, y: posY + 25, z: posZ + 100 };
 
       //call the function
       this.createRedRings(id, blackPosition);

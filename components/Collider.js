@@ -10,7 +10,7 @@ AFRAME.registerComponent("flying-birds", {
       var posY = Math.random() * 50 + -1;
       var posZ = Math.random() * 1000 + -1000;
 
-      var position = { x: posX, y: posY, z: posZ };
+      var position = { x: posX + 500, y: posY + 23, z: posZ + 100};
 
       //call the function
       this.flyingBirds(id, position);

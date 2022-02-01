@@ -4,7 +4,7 @@ AFRAME.registerComponent("game-play", {
   },
 
   init: function () {
-    var duration = 1000;
+    var duration = 100;
     var timerEl = document.querySelector("#timer");
     this.startTimer(duration, timerEl);
   },

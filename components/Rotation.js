@@ -7,12 +7,12 @@ AFRAME.registerComponent("terrain-rotation-reader", {
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") {
         if (this.data.speedOfRotation < 0.1) {
-          this.data.speedOfRotation += 0.01;
+          this.data.speedOfRotation += 0.05;
         }
       }
       if (e.key === "ArrowLeft") {
         if (this.data.speedOfRotation > -0.1) {
-          this.data.speedOfRotation -= 0.01;
+          this.data.speedOfRotation -= 0.05;
         }
       }
     });
@@ -59,22 +59,22 @@ AFRAME.registerComponent("plane-rotation-reader", {
         }
       }
       if (e.key === "ArrowUp") {
-        if (planeRotation.z < 20) {
-          planeRotation.z += 0.2;
-          this.el.setAttribute("rotation", planeRotation);
-        }
+        // if (planeRotation.z < 20) {
+        //   planeRotation.z += 0.5;
+        //   this.el.setAttribute("rotation", planeRotation);
+        // }
         if (planePosition.y < 2) {
-          planePosition.y += 0.1;
+          planePosition.y += 0.5;
           this.el.setAttribute("position", planePosition);
         }
       }
       if (e.key === "ArrowDown") {
-        if (planeRotation.z > -10) {
-          planeRotation.z -= 0.2;
-          this.el.setAttribute("rotation", planeRotation);
-        }
+        // if (planeRotation.z > -10) {
+        //   planeRotation.z -= 0.5;
+        //   this.el.setAttribute("rotation", planeRotation);
+        // }
         if (planePosition.y > -2) {
-          planePosition.y -= 0.1;
+          planePosition.y -= 0.5;
           this.el.setAttribute("position", planePosition);
         }
       }
